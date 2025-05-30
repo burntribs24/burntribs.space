@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title id="dynamic-title">FHP Forums | @BurntRibs24</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="https://burntribs.space/logos/mainav.png">
+  <link rel="apple-touch-icon" href="https://burntribs.space/logos/mainav.png"/>
+
+  <meta content="FHP Forums | BurntRibs24" property="og:title" />
+  <meta content="Community forum for discussions and guidelines." property="og:description"/>
+  <meta content="https://burntribs.space/logos/mainav.png" property="og:image"/>
+  <meta content="https://burntribs.space/fhpforums" property="og:url"/>
+  <meta name="theme-color" content="#1F35E8">
+  <meta name="twitter:card" content="summary_large_image"/>
+</head>
+
+<body class="bg-gray-900 text-gray-100 font-mono">
+  <header class="text-center py-10">
+    <img src="https://burntribs.space/logos/mainav.png" alt="Avatar" class="w-20 h-20 mx-auto rounded-full border-4 border-gray-500">
+    <h1 class="text-4xl mt-4 text-white">FHP Forums</h1>
+    <p class="text-gray-400">by BurntRibs24</p>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4">
+    <section class="my-12">
+      <h2 class="text-2xl mb-4 border-b border-gray-600 pb-2">Recent Posts</h2>
+      <ul class="space-y-4">
+        <li class="bg-gray-800 p-4 rounded hover:bg-gray-700 transition">
+          <a href="/fhpforums/srt-vehicle-guidelines.html" class="text-blue-400 text-xl underline">
+            [SRT] Vehicle Guidelines
+          </a>
+          <p class="text-gray-400 mt-1 text-sm">Posted by BurntRibs24 | May 30, 2025</p>
+        </li>
+        <!-- addmrl -->
+      </ul>
+    </section>
+  </main>
+  <footer class="text-center py-6 border-t border-gray-700 mt-10 text-gray-500">
+    &copy; 2025 BurntRibs24. break stuff. learn things. stay legal.
+  </footer>
+  <script>
+    const title = "FHP Forums | @BurntRibs24";
+    const element = document.getElementById("dynamic-title");
+    let i = 1;
+    let forward = true;
+    setInterval(() => {
+      if (forward) {
+        if (i <= title.length) {
+          element.innerText = title.substring(0, i);
+          i++;
+        } else {
+          forward = false;
+          i = title.length - 1;
+        }
+      } else {
+        if (i > 1) {
+          element.innerText = title.substring(0, i);
+          i--;
+        } else {
+          element.innerText = title.substring(0, 1);
+          forward = true;
+          i = 2;
+        }
+      }
+    }, forward ? 300 : 200);
+  </script>
+</body>
+</html>
